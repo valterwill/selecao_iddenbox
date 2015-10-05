@@ -31,6 +31,9 @@ def input_(message, type):
 	clear_cls()
 	return value
 
+'''
+Função responsavel por validar o nome de um usuario através de algum padrão estabelecido.
+'''
 def test(name):	
 	if re.match("^[_.][0-9]+[a-zA-Z]*[_]?$", name):
 		return "VALIDO"

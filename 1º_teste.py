@@ -68,10 +68,13 @@ def input_array(message, n_elemments):
 	clear_cls()
 	return array
 	
-
+'''
+Função responsavel por checar se existe um i tal que A1+A2...Ai-1 = Ai+1+Ai+2 … AN
+'''
 def test(case):	
 	if True in [(lambda i: sum(case[:i]) == sum(case[i+1:len(case)]))(i) for i, val in enumerate(case)]: return "SIM"	
 	return 	"Não"
+
 
 def inputs(cases):
 	print "Entradas\n", len(cases)

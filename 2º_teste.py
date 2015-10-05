@@ -69,11 +69,14 @@ def input_array(message, n_elemments):
 	clear_cls()
 	return array
 	
-
+'''
+Função responsavel por checar a compra do maior número possível de brinquedos com K reais.
+'''
 def test(money, price_toys, n):	
 	lists_toys = [list(toys) for toys in itertools.combinations(price_toys,n) if sum(toys) <= money]
 	if lists_toys: return max([len(toys) for toys in lists_toys])
 	return test(money, price_toys,n-1)
+	
 
 def inputs(n_toys, money, price_toys):
 	print "Entradas\n", n_toys, " ", money
