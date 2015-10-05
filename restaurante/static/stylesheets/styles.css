@@ -1,0 +1,101 @@
+.container{
+  padding-top: 10px;
+  padding-left: 255px;
+}
+
+
+.no-items-here {
+  text-align: center;
+}
+
+.item {}
+
+.item .item__nome {
+  font-weight: bold;
+  padding-bottom: 19px;
+  color: blue;
+}
+
+.item .item__content {
+  color: gray;
+}
+
+.item .item__money {
+  font-weight: bold;
+  color: white;
+  font-size: 15px;
+  padding: 5px;
+  background-color: blue;
+  margin-bottom: -10px;
+}
+
+.item .item__time {
+  font-style: italic;
+  color: #ccc;
+  padding-top: 10px;
+}
+
+.item .item__meta a:hover {
+  text-decoration: none;
+}
+
+.header-panel {
+background-color: #495bc0;
+height: 144px;
+position: relative;
+z-index: 3;
+}
+
+.header-panel h1 {
+color: #FFF;
+font-size: 20px;
+font-weight: 400;
+bottom: 10px;
+padding-top: 80px;
+}
+
+#custom-search-input {
+    margin:0;
+    margin-top: 10px;
+    padding: 0;
+    padding-left: 23px;
+}
+
+#custom-search-input .search-query {
+    padding-right: 3px;
+    padding-right: 4px \9;
+    padding-left: 3px;
+    padding-left: 4px \9;
+    /* IE7-8 doesn't have border-radius, so don't indent the padding */
+
+    margin-bottom: 0;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+#custom-search-input button {
+    border: 0;
+    background: none;
+    /** belows styles are working good */
+    padding: 2px 5px;
+    margin-top: 2px;
+    position: relative;
+    left: -28px;
+    /* IE7-8 doesn't have border-radius, so don't indent the padding */
+    margin-bottom: 0;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    color:#D9230F;
+}
+
+.search-query:focus + button {
+    z-index: 3;   
+}
+
+.select button {width:100%; text-align:left;}
+.select .caret {position:absolute; right:10px; margin-top:10px;}
+.select:last-child>.btn {border-top-left-radius:5px; border-bottom-left-radius:5px;}
+.selected {padding-right:10px;}
+.option {width:100%;}

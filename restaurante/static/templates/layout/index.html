@@ -1,0 +1,74 @@
+<div id="sidebar-wrapper" class="shadow-z-2">
+    <ul class="sidebar-nav">
+        <li class="sidebar-brand">
+            <a href="#">
+                Menu
+            </a>
+        </li>
+        <li>
+        	<div class="row">
+				<div id="custom-search-input">
+                    <div class="input-group col-md-12">
+                        <input type="text" class="  search-query form-control" placeholder="Search" ng-model="vm.item_name" />
+                        <span class="input-group-btn">
+                            <button class="btn btn-danger" type="button" ng-click="refreshItems()">
+                                <span class=" glyphicon glyphicon-search"></span>
+                            </button>
+                        </span>
+                    </div>
+                </div>
+			</div>
+        </li>
+        <li>
+    		<div class="form-group">
+		        <div class="col-lg-12">
+		        	<select 
+		        		ng-selected="vm.category"
+		        		ng-change="refreshCategory()"
+		        		class="form-control" 
+					    ng-model="vm.category"
+					    ng-options="cat.nome for cat in vm.categories_menu">
+					    <option value="">Todas as Categoria</option>
+					</select>
+		            <br>
+		        </div>
+		    </div>    	
+        </li>
+        <li>
+        	<div class="row">
+				<div id="custom-search-input">
+                    <div class="input-group col-md-12">
+                        <label>Ordenar por:</label>
+                        <div class="sample1">
+		                <div class="radio radio-success">
+		                  <label>
+		                    <input type="radio" name="order" value="false" ng-model="vm.order"><span class="circle"></span><span class="check"></span>
+		                    Menor valor
+		                  </label>
+		                </div>
+		                <div class="radio radio-success">
+		                  <label>
+		                    <input type="radio" name="order" value="true" ng-model="vm.order"><span class="circle"></span><span class="check"></span>
+		                    Maior Valor
+		                  </label>
+		                </div>
+		              </div>
+                    </div>
+                </div>
+			</div>
+        </li>
+    </ul>
+</div>
+
+<div ng-repeat="cat in vm.categories">
+	<ul class="breadcrumb">
+    	<li class="active">{{cat.nome}}</li>
+  	</ul>
+	<items categoria="cat" items="vm.items" ng-show="vm.items && vm.items.length"></items>
+</div>
+
+<div ng-hide="vm.categories && vm.categories.length">
+    <div class="col-sm-12 no-items-here">
+      <em>The are no items here.</em>
+    </div>
+  </div>
